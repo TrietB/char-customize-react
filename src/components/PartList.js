@@ -1,22 +1,22 @@
 import React from 'react'
 
-function PartList() {
+function PartList({title, path, total, set }) {
+  const arr = []
+  for(let i = 0; i < total; i++){
+    
+    arr.push(
+      <div key={i} className="item"><img src={`/images/${path}/${i+1}.png`} alt="" onClick={()=>{set(i)}}/></div>
+    )
+
+  }
+  
   return (
-    <div className="items-menu">
-        <h3>Body</h3>
-        <div className="items-wrapper">
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>
-            <div className="item"><img src="/character/body/10.png" alt=""/></div>  
-        </div>   
-    </div>
+      <div className="items-menu">
+      <h3>{title}</h3>
+      <div className="items-wrapper">
+        {arr}
+      </div>   
+      </div>
   )
 }
 
