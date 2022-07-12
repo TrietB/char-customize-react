@@ -29,12 +29,12 @@ function App() {
     const [glasses, setGlasses] = useState(9)
 
     
-    const Heading = ({greetings})=>
-        (<h1>{greetings}</h1>)
+    // const Heading = ({greetings})=>
+    //     (<h1>{greetings}</h1>)
     
     const randomComponent = (arr, pos)=>{
         for(let path in arr){
-            if(pos == path){
+            if(pos === path){
                 let min = 1
                 let max = arr[path]
                 let result = Math.round(Math.random() * (max - min) + min)
@@ -60,6 +60,7 @@ function App() {
     }
     useEffect(()=>{
         randomize()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])    
 
 
