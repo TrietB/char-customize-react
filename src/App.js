@@ -15,6 +15,7 @@ const total ={
 	clothing3: 9,
 };
 
+
 function App() {
     const [body, setBody] = useState(0)
     const [eyes, setEyes] = useState(1)
@@ -27,6 +28,10 @@ function App() {
     const [eyeBrows, setEyesBrown] = useState(8)
     const [glasses, setGlasses] = useState(9)
 
+    
+    const Heading = ({greetings})=>
+        (<h1>{greetings}</h1>)
+    
     const randomComponent = (arr, pos)=>{
         for(let path in arr){
             if(pos == path){

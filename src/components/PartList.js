@@ -1,11 +1,11 @@
 import React from 'react'
 
-function PartList({title, path, total, set }) {
+function PartList({title, path, total, setItem }) {
   const arr = []
   for(let i = 0; i < total; i++){
     
     arr.push(
-      <div key={i} className="item"><img src={`/images/${path}/${i+1}.png`} alt="" onClick={()=>{set(i)}}/></div>
+      <div key={i} className="item"><img src={`/images/${path}/${i+1}.png`} alt="" onClick={()=>{setItem(i)}}/></div>
     )
 
   }
