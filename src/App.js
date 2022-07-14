@@ -60,7 +60,7 @@ function App() {
     }
     useEffect(()=>{
         randomize()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+ 
     },[])    
 
 
@@ -85,15 +85,15 @@ function App() {
                 <div className="middle"><button onClick={()=>randomize(total)} className="button">Randomize!</button></div>
             </div>
             <div>
-                <PartList title={'Body'} path={'body'} total={total.body} set={setBody}/>
-                <PartList title={'Eyes'} path={'eyes'} total={total.eyes} set={setEyes}/>
-                <PartList title={'Hair'} path={'hair'} total={total.hair} set={setHair}/>
-                <PartList title={'Shirts'} path={'clothes/layer_1'} total={total.clothing1} set={setClothing1}/>
-                <PartList title={'Coats'} path={'clothes/layer_2'} total={total.clothing2} set={setClothing2}/>
-                <PartList title={'Clothing Accessories'} path={'clothes/layer_3'} total={total.clothing3} set={setClothing3}/>
-                <PartList title={'Mouths'} path={'mouths'} total={total.mouth} set={setMouth}/>
-                <PartList title={'Eyebrows'} path={'eyebrows'} total={total.eyebrows} set={setEyesBrown}/>
-                <PartList title={'Glasses'} path={'accessories/glasses'} total={total.glasses} set={setGlasses}/>
+                <PartList title={'Body'} path={'body'} total={total.body} setItem={setBody}/>
+                <PartList title={'Eyes'} path={'eyes'} total={total.eyes} setItem={setEyes}/>
+                <PartList title={'Hair'} path={'hair'} total={total.hair} setItem={setHair}/>
+                <PartList title={'Shirts'} path={'clothes/layer_1'} total={total.clothing1} setItem={setClothing1}/>
+                <PartList title={'Coats'} path={'clothes/layer_2'} total={total.clothing2} setItem={setClothing2}/>
+                <PartList title={'Clothing Accessories'} path={'clothes/layer_3'} total={total.clothing3} setItem={setClothing3}/>
+                <PartList title={'Mouths'} path={'mouths'} total={total.mouth} setItem={setMouth}/>
+                <PartList title={'Eyebrows'} path={'eyebrows'} total={total.eyebrows} setItem={setEyesBrown}/>
+                <PartList title={'Glasses'} path={'accessories/glasses'} total={total.glasses} setItem={setGlasses}/>
             </div>
         </div>
     </div>
